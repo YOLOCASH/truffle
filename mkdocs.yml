@@ -19,8 +19,8 @@ pages:
   - Writing external scripts: 'getting_started/scripts.md'
   - Improving your workflow: 'getting_started/workflow.md'
   - Contact the developers: 'getting_started/contact.md'
-- Advanced:
-  - Configuration: 'advanced/configuration.md'
+- Avanzado:
+  - Configuración: 'advanced/configuration.md'
   - Environments: 'advanced/environments.md'
   - Build Processes: 'advanced/build_processes.md'
   - Command Reference: 'advanced/commands.md'

@@ -1,8 +1,8 @@
-# Location
+# Localización
 
-Your configuration file is called `truffle.js`, and is located at the root of your project directory. This file is a Javascript file and can execute any code necessary to create your configuration. It must export an object representing your project configuration like the example below.
+Tu archivo de configuración se llama `truffle.js`, y está localizado en la raíz del directorio de tu proyecto. Este archivo es de tipo Javascript y puede ejecutar el código necesario para crear tu configuración. Este debe exportar un objeto representando la configuración de tu proyecto tal cual el ejemplo abajo.
 
-# Example
+# Ejemplo
 
 ```javascript
 module.exports = {
@@ -27,15 +27,15 @@ module.exports = {
 };
 ```
 
-The default configuration ships with three options specified: `build`, `deploy`, and `rpc`. These options as well as non-default options are detailed below.
+La configuración por defecto viene con tres opciones especificadas: `build`, `deploy` y `rpc`. Estas opciones, así como las opciones que no vienen por defcto, son detalladas abajo.
 
 # Options
 
 ### build
 
-Build configuration of your frontend. By default this configuration invokes the default builder, described in the [Build](/getting_started/build) section, but you can use custom build processes as well. See the [advanced build processes](/advanced/build_processes) section for details.
+La configuración de _armado_ de tu frontend. Por defecto esta configuración invoca el armador por defecto, decrito en la sección [Armado](/getting_started/build), sin embargo, tu puedes usar tus propios procesos de armado. Consulta la sección [Procesos de armado avanzados](/advanced/build_processes) para detalles.
 
-**Example:**
+**Ejemplo:**
 
 ```javascript
 build: {
@@ -52,9 +52,9 @@ build: {
 
 ### deploy
 
-An array of contracts that you want deployed when `truffle deploy` is run. This topic is discussed in detail in the [deploying to the network](/getting_started/deploy) section.
+Un array que reprensenta los contratos que tu quieres _desplegar_ cuando `truffle deploy` es ejecutado. Este tema es discutido en detalle en la sección [desplegando a la red](/getting_started/deploy).
 
-**Example:**
+**Ejemplo:**
 
 ```javascript
 deploy: [
@@ -65,9 +65,9 @@ deploy: [
 
 ### after_deploy
 
-An array of scripts meant to be run after a successful deploy. These scripts are run in order, and executed using the `truffle exec` functionality described in the [external scripts](/getting_started/scripts) section. These scripts have access to the contracts defined within your current environment, and can be used to write custom deployment steps as if you were writing tests or your frontend. Each path is relative to the root directory of your project.
+Un array de scripts pensado para ser ejecutado despues de un despliegue exitoso. Estos scripts son ejecutados en orden, usando la funcionalidad `truffle exec` descrita en la sección [scripts externos](/getting_started/scripts). Estos scripts tienen acceso a los contratos definidos dentro de tu ambiente actual, y pueden ser usados para escribir pasos de despliegue personalidados como si tú estuvieses escribiendo tests desde tu frontend. Cada ruta es relativa al directorio raíz de tu proyecto.
 
-**Example:**
+**Ejemplo:**
 
 ```javascript
 after_deploy: [
@@ -78,15 +78,15 @@ after_deploy: [
 
 ### rpc
 
-Details about how to connect to your ethereum client. The `host` and `port` keys are required. However, a few other keys are available:
+Detalles de como conectarte a tu cliente de ethereum. Los valores de `host` y `port` (puerto) son obligatorios. Ahora, hay disponibles otras opciones además:
 
-* `host`: Hostname pointing to the network location of your Ethereum client (usually "localhost" for development).
-* `port`: Port number where your Etheruem client accepts requests. Default is `8545`.
-* `gas`: Gas limit used for deploys. Default is `3141592`.  
-* `gasPrice`: Gas price used for deploys. Default is `100000000000` (100 Shannon).
-* `from`: From address used in deploys. If not specified, defaults to the first available account provided by your Ethereum client.
+* `host`: Hostname apuntando a la localización de tu cliente Ethereum (usualmente `localhost` para desarrollo).
+* `port`: Número de puerto apuntando donde tu cliente Ethereum acepta requests. El puerto por defecto es `8545`.
+* `gas`: El límite de Gasolina usado para despliegues. El valor por defecto es `3141592`.
+* `gasPrice`: El precio de la gasolina usado para los despliegues. El valor por defecto es `100000000000` (100 Shannon).
+* `from`: La dirección `desde` (`from`) usada en los despliegues. Si no está especificada, esta se ajusta por defecto a la primera cuenta disponible proveída por tu cliente de Ethereum.
 
-**Example:**
+**Ejemplo:**
 
 ```javascript
 rpc: {
@@ -97,9 +97,9 @@ rpc: {
 
 ### mocha
 
-Configuration options for the [MochaJS](http://mochajs.org/) testing framework. This configuration expects an object as detailed in Mocha's [documentation](https://github.com/mochajs/mocha/wiki/Using-mocha-programmatically#set-options).
+Opciones de configuración para el framework de testing [MochaJS](http://mochajs.org). Esta configuración espera un objeto según el detalle en la [documentación](https://github.com/mochajs/mocha/wiki/Using-mocha-programmatically#set-options) de Mocha (en inglés).
 
-**Example:**
+**Ejemplo:**
 
 ```javascript
 mocha: {
@@ -107,6 +107,6 @@ mocha: {
 }
 ```
 
-# Considerations
+# Consideraciones
 
-You can override any of the settings specified in `truffle.js` for each of your environments. See more details in the [environments](/advanced/environments) section.
+Tu puedes sobrescribir cualquiera de las configuraciones especificadas en `truffle.js` para cada uno de tus ambientes. Para más detalles, consulta en la sección [ambientes](/advanced/environments).
