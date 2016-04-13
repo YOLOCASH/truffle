@@ -1,7 +1,7 @@
 ---
 site_name: Truffle
 repo_url: https://github.com/Consensys/truffle
-site_description: Docmentacion de Truffle
+site_description: Documentación de Truffle
 theme: readthedocs
 extra_css: [extra.css]
 pages:
